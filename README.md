@@ -38,7 +38,7 @@ Using this image of Franz Kafka ![Franz Kafka](/examples/kafka.png) and calling
 ./asciinator kafka.jpg 1 2
 ```
 leads to
-```
+```bash
                                                           
                                ..     .              .    
                          .... ,;;;. ....    ............  
