@@ -41,7 +41,7 @@ Using an image of Franz Kafka and calling
 
 leads to
 
-![Franz Kafka](pyart/examples/kafka.jpg) -> ![Franz Kafka](pyart/examples/kafka_ascii.jpg) 
+![Franz Kafka](examples/kafka.jpg) -> ![Franz Kafka](examples/kafka_ascii.jpg) 
 
 
 
