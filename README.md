@@ -41,7 +41,7 @@ Using an image of Franz Kafka and calling
 
 leads to
 
-![Franz Kafka](examples/kafka.jpg =x300) -> ![Franz Kafka](examples/kafka_ascii.jpg =x300) 
+![Franz Kafka](examples/kafka.jpg) -> ![Franz Kafka](examples/kafka_ascii.jpg) 
 
 
 
