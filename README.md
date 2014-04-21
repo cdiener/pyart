@@ -38,7 +38,7 @@ Using this image of Franz Kafka ![Franz Kafka](/examples/kafka.png) and calling
 ./asciinator kafka.jpg 1 2
 ```
 leads to
-`
+```
                                                           
                                ..     .              .    
                          .... ,;;;. ....    ............  
@@ -86,5 +86,5 @@ leads to
 iAMGMMhAXrsssA5AsASHA2    .r525hhhA53M22h3522AhAiA3SH32rXs
 A55AssX2AXrsXXXsssSAA,    .5A25hM5A5552AXh2sXh5XXAMH35Xssr
 AXXrirssrrrissr;s3SXs;   .5ss2AA5XX2A2XX2srXAXsXX3hh3Asrss
-`
+```
 
