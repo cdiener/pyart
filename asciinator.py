@@ -37,14 +37,15 @@ if len(sys.argv) != 4:
 
 # set basic program parameters 
 # f = filename, SC = scale, GCF = gamma correction factor, WCF = width correction factor	
-f, SC, GCF, WCF = sys.argv[1], float(sys.argv[2]), float(sys.argv[3]), 7/4
+f, SC, GCF, WCF = sys.argv[1], float(sys.argv[2]), float(sys.argv[3]), 7.0/4.0
 
 # open, scale and normalize image by pixel intensities
 img = Image.open(f)
-S = ( round(img.size[0]*SC*WCF), round(img.size[1]*SC) )
-img = np.sum( np.asarray( img.resize(S) ), axis=2)
+S = (int(img.size[0]*SC*WCF), int(img.size[1]*SC))
+img = np.sum( np.asarray(img.resize(S), dtype="float"), axis=2)
 img -= img.min()
 img = (1.0 - img/img.max())**GCF*(chars.size-1)
 
 # Assemble and print ascii art
-print( "\n".join( ("".join(r) for r in chars[img.astype(int)]) ) )
+print( "\n".join(("".join(r) for r in chars[img.astype(int)])))
+print()
