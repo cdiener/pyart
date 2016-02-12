@@ -1,0 +1,19 @@
+language: python
+
+sudo: false
+addons:
+    apt:
+        packages:
+            - python-matplotlib
+            - python3-matplotlib
+            - python-numpy
+            - python3-numpy
+            - python-pil
+            - python3-pil
+python:
+    - "2.7"
+    - "3.4"
+    - "3.5"
+script:
+    - python asciinator.py examples/kafka.jpg 0.1 2
+    - python polygonator.py examples/kafka.jpg 0.15 0.25 o
