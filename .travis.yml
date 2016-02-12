@@ -8,12 +8,21 @@ addons:
             - python3-matplotlib
             - python-numpy
             - python3-numpy
-            - python-pil
-            - python3-pil
+            - libtiff4-dev 
+            - libjpeg8-dev 
+            - zlib1g-dev 
+            - libfreetype6-dev 
+            - liblcms2-dev 
+            - libwebp-dev 
+            - tcl8.5-dev 
+            - tk8.5-dev 
+            - python-tk
+            - python3-tk
 python:
     - "2.7"
     - "3.4"
     - "3.5"
+install: pip install --user pillow
 script:
     - python asciinator.py examples/kafka.jpg 0.1 2
     - python polygonator.py examples/kafka.jpg 0.15 0.25 o
