@@ -26,6 +26,8 @@ from __future__ import print_function		# for python2 compatibility
 import sys, os
 from PIL import Image
 from numpy import mgrid, vstack, asarray
+from matplotlib import use
+use("Agg")
 from matplotlib.pyplot import scatter, figure, axis, xlim, ylim, savefig, subplots_adjust
 
 # Check for right number of command line arguments
