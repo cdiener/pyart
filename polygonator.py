@@ -40,11 +40,11 @@ SCALE = float(SCALE)
 
 # resize image by scale and derive size of polygons
 img = Image.open(f)
-img = img.resize( ( round(img.size[0]*SCALE), round(img.size[1]*SCALE) ) )
+img = img.resize( ( int(img.size[0]*SCALE), int(img.size[1]*SCALE) ) )
 size = img.size
-img = asarray(img)
-inch_scale = size[0]/10
-msize = 72*(1.0-SPACING)/inch_scale
+img = asarray(img, dtype="float")
+inch_scale = size[0]/10.0
+msize = 72.0*(1.0-SPACING)/inch_scale
 
 # Build up grid points
 X, Y = mgrid[0:(size[0]-1), 0:(size[1]-1)]
@@ -52,7 +52,7 @@ Y = Y.max() - Y		# invert y-axis
 grid = vstack([X.ravel(), Y.ravel()]).T
 
 # Initialize plot and colors
-fig = figure( figsize=(size[0]/inch_scale, size[1]/inch_scale) )
+fig = figure( figsize=(int(size[0]/inch_scale), int(size[1]/inch_scale)) )
 axis('off')
 xlim((-1,size[0]-1))
 ylim((-1,size[1]-1))
