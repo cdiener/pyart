@@ -13,10 +13,6 @@ before_install:
   - ./miniconda.sh -b -p /home/travis/miniconda
   - export PATH=/home/travis/miniconda/bin:$PATH
   - conda update --yes conda
-  # The next couple lines fix a crash with multiprocessing on Travis and are not specific to using Miniconda
-  - rm -rf /dev/shm
-  - ln -s /run/shm /dev/shm
-# Install packages
 install:
   - conda install --yes python=$TRAVIS_PYTHON_VERSION atlas numpy matplotlib pillow
 
